@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: account-service
+  profiles:
+    active: development,swagger
+  cloud:
+    consul:
+      host: 10.38.113.131
+      port: 8500
+      discovery:
+        prefer-ip-address: true
+        enabled: true
+        instanceId: ${spring.application.name}
